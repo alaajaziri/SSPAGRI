@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSPAGRI - Partenaire de Votre Réussite Agricole</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #e6ffe6 0%, #a8e6a8 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #28a745 0%, #218838 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .contact-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        #mobile-menu:not(.hidden) {
+            max-height: 500px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50" id="top">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#top" class="flex items-center py-4 px-2">
+                        <img src="images/logo.png" alt="SSPAGRI Logo" class="h-10 w-auto mr-2">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8" id="navbar-default">
+                    <a href="#top" class="text-green-600 font-medium" data-i18n="nav_home">Accueil</a>
+                    <a href="#services" class="text-gray-600 hover:text-green-600 transition" data-i18n="nav_services">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-green-600 transition" data-i18n="nav_about">À propos</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 transition" data-i18n="nav_contact">Contact</a>
+                    <div class="relative">
+                        <select id="language-switcher" class="block appearance-none bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                   
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-green-600 focus:outline-none focus:text-green-600">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md py-2">
+            <a href="#top" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition" data-i18n="nav_home">Accueil</a>
+            <a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition" data-i18n="nav_services">Services</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition" data-i18n="nav_about">À propos</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition" data-i18n="nav_contact">Contact</a>
+            <div class="px-4 py-2">
+                <select id="mobile-language-switcher" class="block w-full appearance-none bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6" data-i18n="hero_title">Partenaire de Votre Réussite Agricole</h1>
+                    <p class="text-gray-600 text-lg mb-8" data-i18n="hero_description">SOCIETE LE SOMMET DE SERVICES ET PRODUITS AGRICOLES - Des solutions innovantes pour votre exploitation agricole.</p>
+                    <a href="#contact" class="btn-primary text-white px-8 py-3 rounded-full font-medium inline-block" data-i18n="hero_contact_button">Contactez-nous</a>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="images/Sidi_Thabet.jpg" alt="Sidi Thabet" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-i18n="services_title">Nos Services</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="package" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="service1_title">Produits Agricoles</h3>
+                    <p class="text-gray-600" data-i18n="service1_description">Fourniture de produits agricoles de qualité pour répondre à tous vos besoins d'exploitation.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="tool" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="service2_title">Services Techniques</h3>
+                    <p class="text-gray-600" data-i18n="service2_description">Expertise et conseils techniques pour optimiser votre production agricole.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="text-green-600 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="service3_title">Solutions Intégrées</h3>
+                    <p class="text-gray-600" data-i18n="service3_description">Approche globale pour résoudre les défis de votre exploitation agricole.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6" data-i18n="about_title">À propos de SSPAGRI</h2>
+                    <p class="text-gray-600 mb-6" data-i18n="about_paragraph1">SSPAGRI (SOCIETE LE SOMMET DE SERVICES ET PRODUITS AGRICOLES) est une entreprise spécialisée dans les services et produits agricoles, engagée à soutenir les agriculteurs dans leur quête d'excellence.</p>
+                    <p class="text-gray-600 mb-6" data-i18n="about_paragraph2">Notre mission est de fournir des solutions innovantes et adaptées aux besoins spécifiques de chaque exploitation, contribuant ainsi à la réussite agricole de nos partenaires.</p>
+                    <div class="flex items-center mt-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="check" class="text-green-600"></i>
+                        </div>
+                        <p class="text-gray-600" data-i18n="about_feature1">Expertise technique de haut niveau</p>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i data-feather="check" class="text-green-600"></i>
+                        </div>
+                        <p class="text-gray-600" data-i18n="about_feature2">Produits agricoles de qualité supérieure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-i18n="contact_title">Contactez-nous</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
+                    <div class="contact-card bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6" data-i18n="contact_info_title">Informations de contact</h3>
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="user" class="text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium" data-i18n="contact_person_name">EL GHARBI HAMED</p>
+                                <p class="text-gray-500" data-i18n="contact_person_title">Directeur Technique</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="phone" class="text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium" data-i18n="contact_phone1">(+216) 24 950 399</p>
+                                <p class="text-gray-600 font-medium" data-i18n="contact_phone2">56 023 358</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-6">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="mail" class="text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium" data-i18n="contact_email">sspagri24@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i data-feather="map-pin" class="text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium" data-i18n="contact_address1">Borj El Khouja, Sidi Thabet</p>
+                                <p class="text-gray-600" data-i18n="contact_address2">Ariana 2020, Tunisie</p>
+                            </div>
+                        </div>
+                        <!-- Google Maps Embed -->
+                        <div class="mt-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.8988174085483!2d10.0842722!3d36.9204444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDU1JzEzLjYiTiAxMMKwMDUnMDcuNCJF!5e0!3m2!1sen!2sus!4v1624452062831!5m2!1sen!2sus" width="100%" height="300" style="border:0; border-radius: 0.5rem;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="74867aa5-db04-4c41-ac89-e1766f5aea85">
+                        <input type="hidden" name="from_name" value="SSPAGRI Website">
+                        <input type="hidden" name="subject" value="New Contact Form Submission">
+
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Nom complet" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Téléphone"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Votre message..." required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="btn-primary text-white px-6 py-3 rounded-full font-medium w-full hover:bg-green-700 transition">
+                            Envoyer le message
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">SS</div>
+                        <span class="ml-3 text-xl font-semibold" data-i18n="company_name_footer">SSPAGRI</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md" data-i18n="footer_description">Partenaire de votre réussite agricole avec des services et produits de qualité supérieure.</p>
+                </div>
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer_quick_links_title">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition" data-i18n="nav_home">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition" data-i18n="nav_services">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition" data-i18n="nav_about">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer_contact_title">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400" data-i18n="contact_phone1">(+216) 24 950 399</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                            <span class="text-gray-400" data-i18n="contact_email">sspagri24@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="w-4 h-4 mr-2 mt-1"></i>
+                            <span class="text-gray-400" data-i18n="contact_address_footer">Borj El Khouja, Sidi Thabet<br>Ariana 2020, Tunisie</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p data-i18n="footer_copyright">&copy; 2023 SSPAGRI. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       
+
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+
+            // Load saved language preference
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+            setLanguage(savedLanguage);
+
+            // Language switcher logic
+            const languageSwitcher = document.getElementById('language-switcher');
+            const mobileLanguageSwitcher = document.getElementById('mobile-language-switcher');
+
+            if (languageSwitcher) {
+                languageSwitcher.value = savedLanguage;
+                languageSwitcher.addEventListener('change', (event) => {
+                    setLanguage(event.target.value);
+                    if (mobileLanguageSwitcher) {
+                        mobileLanguageSwitcher.value = event.target.value;
+                    }
+                });
+            }
+
+            if (mobileLanguageSwitcher) {
+                mobileLanguageSwitcher.value = savedLanguage;
+                mobileLanguageSwitcher.addEventListener('change', (event) => {
+                    setLanguage(event.target.value);
+                    if (languageSwitcher) {
+                        languageSwitcher.value = event.target.value;
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const headerOffset = 70;
+
+                    if (targetElement) {
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else if (targetId === '#top') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+
+
+                    // Close mobile menu after clicking a link
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+           
+        });
+
+        // AOS initialization
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+
+        const translations = {
+            fr: {
+                company_name: "SSPAGRI",
+                nav_home: "Accueil",
+                nav_services: "Services",
+                nav_about: "À propos",
+                nav_contact: "Contact",
+                hero_title: "Partenaire de Votre Réussite Agricole",
+                hero_description: "SOCIETE LE SOMMET DE SERVICES ET PRODUITS AGRICOLES - Des solutions innovantes pour votre exploitation agricole.",
+                hero_contact_button: "Contactez-nous",
+                services_title: "Nos Services",
+                service1_title: "Produits Agricoles",
+                service1_description: "Fourniture de produits agricoles de qualité pour répondre à tous vos besoins opérationnels.",
+                service2_title: "Services Techniques",
+                service2_description: "Expertise et conseils techniques pour optimiser votre production agricole.",
+                service3_title: "Solutions Intégrées",
+                service3_description: "Une approche globale pour résoudre les défis de votre exploitation agricole.",
+                about_title: "À propos de SSPAGRI",
+                about_paragraph1: "SSPAGRI (SOCIETE LE SOMMET DE SERVICES ET PRODUITS AGRICOLES) est une entreprise spécialisée dans les services et produits agricoles, engagée à soutenir les agriculteurs dans leur quête d'excellence.",
+                about_paragraph2: "Notre mission est de fournir des solutions innovantes et adaptées aux besoins spécifiques de chaque exploitation, contribuant ainsi à la réussite agricole de nos partenaires.",
+                about_feature1: "Expertise technique de haut niveau",
+                about_feature2: "Produits agricoles de qualité supérieure",
+                contact_title: "Contactez-nous",
+                contact_info_title: "Informations de contact",
+                contact_person_name: "EL GHARBI HAMED",
+                contact_person_title: "Directeur Technique",
+                contact_phone1: "(+216) 24 950 399",
+                contact_phone2: "56 023 358",
+                contact_email: "sspagri24@gmail.com",
+                contact_address1: "Borj El Khouja, Sidi Thabet",
+                contact_address2: "Ariana 2020, Tunisie",
+                form_name_label: "Nom complet",
+                form_email_label: "Email",
+                form_phone_label: "Téléphone",
+                form_message_label: "Message",
+                form_submit_button: "Envoyer le message",
+                company_name_footer: "SSPAGRI",
+                footer_description: "Partenaire de votre réussite agricole avec des services et produits de qualité supérieure.",
+                footer_quick_links_title: "Liens rapides",
+                footer_contact_title: "Contact",
+                contact_address_footer: "Borj El Khouja, Sidi Thabet<br>Ariana 2020, Tunisie",
+                footer_copyright: "&copy; 2023 SSPAGRI. Tous droits réservés."
+            },
+            en: {
+                company_name: "SSPAGRI",
+                nav_home: "Home",
+                nav_services: "Services",
+                nav_about: "About",
+                nav_contact: "Contact",
+                hero_title: "Partner in Your Agricultural Success",
+                hero_description: "SSPAGRI (THE SUMMIT COMPANY OF AGRICULTURAL SERVICES AND PRODUCTS) - Innovative solutions for your agricultural operation.",
+                hero_contact_button: "Contact Us",
+                services_title: "Our Services",
+                service1_title: "Agricultural Products",
+                service1_description: "Supply of quality agricultural products to meet all your operational needs.",
+                service2_title: "Technical Services",
+                service2_description: "Expertise and technical advice to optimize your agricultural production.",
+                service3_title: "Integrated Solutions",
+                service3_description: "A global approach to solve the challenges of your agricultural operation.",
+                about_title: "About SSPAGRI",
+                about_paragraph1: "SSPAGRI (THE SUMMIT COMPANY OF AGRICULTURAL SERVICES AND PRODUCTS) is a company specializing in agricultural services and products, committed to supporting farmers in their pursuit of excellence.",
+                about_paragraph2: "Our mission is to provide innovative solutions adapted to the specific needs of each farm, thus contributing to the agricultural success of our partners.",
+                about_feature1: "High-level technical expertise",
+                about_feature2: "Superior quality agricultural products",
+                contact_title: "Contact Us",
+                contact_info_title: "Contact Information",
+                contact_person_name: "EL GHARBI HAMED",
+                contact_person_title: "Technical Director",
+                contact_phone1: "(+216) 24 950 399",
+                contact_phone2: "56 023 358",
+                contact_email: "sspagri24@gmail.com",
+                contact_address1: "Borj El Khouja, Sidi Thabet",
+                contact_address2: "Ariana 2020, Tunisia",
+                form_name_label: "Full Name",
+                form_email_label: "Email",
+                form_phone_label: "Phone",
+                form_message_label: "Message",
+                form_submit_button: "Send Message",
+                company_name_footer: "SSPAGRI",
+                footer_description: "Partner in your agricultural success with superior quality services and products.",
+                footer_quick_links_title: "Quick Links",
+                footer_contact_title: "Contact",
+                contact_address_footer: "Borj El Khouja, Sidi Thabet<br>Ariana 2020, Tunisia",
+                footer_copyright: "&copy; 2023 SSPAGRI. All rights reserved."
+            },
+            ar: {
+                company_name: "SSPAGRI",
+                nav_home: "الرئيسية",
+                nav_services: "خدماتنا",
+                nav_about: "من نحن",
+                nav_contact: "اتصل بنا",
+                hero_title: "شريكك الموثوق في الزراعة",
+                hero_subtitle: "حلول مبتكرة لزراعة مستدامة ومزدهرة.",
+                hero_button: "خدماتنا",
+                services_title: "خدماتنا",
+                service1_title: "المنتجات الزراعية",
+                service1_description: "مجموعة واسعة من المنتجات الزراعية عالية الجودة لتلبية جميع احتياجات التشغيل الخاصة بك.",
+                service2_title: "الخدمات الفنية",
+                service2_description: "الخبرة والمشورة الفنية لتحسين إنتاجك الزراعي.",
+                service3_title: "حلول متكاملة",
+                service3_description: "نهج عالمي لحل تحديات عملياتك الزراعية.",
+                about_title: "عن SSPAGRI",
+                about_paragraph1: "SSPAGRI (شركة قمة الخدمات والمنتجات الزراعية) هي شركة متخصصة في الخدمات والمنتجات الزراعية، ملتزمة بدعم المزارعين في سعيهم للتميز.",
+                about_paragraph2: "مهمتنا هي توفير حلول مبتكرة تتكيف مع الاحتياجات المحددة لكل مزرعة، وبالتالي المساهمة في النجاح الزراعي لشركائنا.",
+                about_feature1: "خبرة فنية عالية المستوى",
+                about_feature2: "منتجات زراعية عالية الجودة",
+                contact_title: "اتصل بنا",
+                contact_info_title: "معلومات الاتصال",
+                contact_person_name: "الغربي حامد",
+                contact_person_title: "المدير الفني",
+                contact_phone1: "(+216) 24 950 399",
+                contact_phone2: "56 023 358",
+                contact_email: "sspagri24@gmail.com",
+                contact_address1: "برج الخوجة، سيدي ثابت",
+                contact_address2: "أريانة 2020، تونس",
+                form_name_label: "الاسم الكامل",
+                form_email_label: "البريد الإلكتروني",
+                form_phone_label: "الهاتف",
+                form_message_label: "الرسالة",
+                form_submit_button: "إرسال الرسالة",
+                company_name_footer: "SSPAGRI",
+                footer_description: "شريكك في النجاح الزراعي مع خدمات ومنتجات عالية الجودة.",
+                footer_quick_links_title: "روابط سريعة",
+                footer_contact_title: "اتصل بنا",
+                contact_address_footer: "برج الخوجة، سيدي ثابت<br>أريانة 2020، تونس",
+                footer_copyright: "&copy; 2023 SSPAGRI. جميع الحقوق محفوظة."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+            setLanguage(savedLanguage);
+
+            const languageSwitcher = document.getElementById('language-switcher');
+            const mobileLanguageSwitcher = document.getElementById('mobile-language-switcher');
+
+            if (languageSwitcher) {
+                languageSwitcher.value = savedLanguage;
+                languageSwitcher.addEventListener('change', (event) => {
+                    setLanguage(event.target.value);
+                    if (mobileLanguageSwitcher) {
+                        mobileLanguageSwitcher.value = event.target.value;
+                    }
+                });
+            }
+
+            if (mobileLanguageSwitcher) {
+                mobileLanguageSwitcher.value = savedLanguage;
+                mobileLanguageSwitcher.addEventListener('change', (event) => {
+                    setLanguage(event.target.value);
+                    if (languageSwitcher) {
+                        languageSwitcher.value = event.target.value;
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scroll for navigation links with offset for fixed header
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const headerOffset = 70; // Approximate height of your fixed header
+
+                    if (targetElement) {
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    } else if (targetId === '#top') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+
+
+                    // Close mobile menu after clicking a link
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+    /// Contact form handling
+    
+    
+});
+        });
+    </script>
+</body>
+</html>
